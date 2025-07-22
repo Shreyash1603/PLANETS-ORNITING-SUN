@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>3D Solar System Simulation</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      background: #101020;
+      color: #fff;
+      overflow: hidden;
+      font-family: 'Segoe UI', Arial, sans-serif;
+    }
+    #container {
+      width: 100vw;
+      height: 100vh;
+      display: block;
+    }
+    .controls {
+      position: absolute;
+      top: 20px;
+      right: 16px;
+      background: rgba(30,30,40,0.92);
+      border-radius: 12px;
+      box-shadow: 0 4px 18px 0 #0008;
+      padding: 18px 22px 12px 22px;
+      z-index: 2;
+      min-width: 240px;
+      color: #fff;
+      font-size: 1em;
+      user-select: none;
+    }
+    .slider-group {
+      margin-bottom: 1em;
+    }
+    .slider-label {
+      display: block;
+      margin-bottom: 0.1em;
+      font-size: 0.97em;
+    }
+    input[type=range] {
+      width: 100%;
+      margin: 0.35em 0;
+      accent-color: #6ddfff;
+    }
+    @media (max-width: 600px) {
+      .controls {
+        top: auto;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        min-width: 0;
+        width: 100vw;
+        box-sizing: border-box;
+        padding: 10px 8px 6px 14px;
+        font-size: 0.95em;
+        border-radius: 0;
+        background: rgba(20,24,30,0.96);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="container"></div>
+  <div class="controls" id="speedControls"></div>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.153.0/build/three.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
